@@ -33,7 +33,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
  //User routes
- 
  'POST /users/create':'UserController.create',
  'GET /users':'UserController.find',
  'PUT /users/:id':'UserController.update',
@@ -47,6 +46,34 @@ module.exports.routes = {
  //email registration routes
  'POST /user/register': 'user/register',
  'GET /user/confirm': 'user/confirm',
- 'POST /user/login': 'user/login'
+ 'POST /user/login': 'user/login',
+
+ //file routes
+ 'POST /image': 'FileController.uploadImage',
+ 'GET /image/:id': 'FileController.viewImage',
+ 'DELETE /image/:id': 'FileController.delete',
+
+ //restaurant routes
+
+ 'POST /rest' : 'RestaurantController.create',
+ 'GET /rest' : 'RestaurantController.find',
+ 'PUT /rest/:id' : 'RestaurantController.update',
+ 'DELETE /rest/:id':'RestaurantController.delete',
+
+
+ //Manage Rest routes
+ 'POST /resto' : 'ManageRestaurantController.create',
+ 'GET /resto' : 'ManageRestaurantController.find',
+ 'PUT /resto/:id' : 'ManageRestaurantController.update',
+ 'DELETE /resto/:id':'ManageRestaurantController.delete',
+
+
+
+
+ 
+ 
+
+
+
 
 };

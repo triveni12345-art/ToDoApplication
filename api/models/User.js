@@ -19,8 +19,7 @@ module.exports = {
       required: true,
       columnName: 'gender',
     },
-
-    email: {
+     email: {
       type: 'string',
       required: true,
       unique: true,
